@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/marekandreas/elpa:
+      branch: master
+      repo: https://github.com/marekandreas/elpa
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/marekandreas/elpa git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-black-zebra.sh
+        container: qc.acc_chummy-olive-armadillo
+  QC.Doc:
+    repos:
+      github.com/marekandreas/elpa find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-tomato-cassowary.sh
+        container: qc.doc_lumpy-lemon-toucan
+      github.com/marekandreas/elpa git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-khaki-opossum.sh
+        container: qc.doc_lumpy-flax-squid
+      github.com/marekandreas/elpa markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-violet-ladybird.sh
+        container: qc.doc_homey-amber-opossum
+  QC.Lic:
+    repos:
+      github.com/marekandreas/elpa licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-black-newt.sh
+        container: qc.lic_pasty-turquoise-moth
+  QC.Sec:
+    repos:
+      github.com/marekandreas/elpa bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-heliotrope-koala.sh
+        container: qc.sec_cloudy-cyan-affenpinscher
+  QC.Sty:
+    repos:
+      github.com/marekandreas/elpa flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-white-buzzard.sh
+        container: qc.sty_gloppy-aquamarine-goose
+  QC.Ver:
+    repos:
+      github.com/marekandreas/elpa get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-taupe-eel.sh
+        container: qc.ver_silly-asparagus-dugong
+timeout: 1800
