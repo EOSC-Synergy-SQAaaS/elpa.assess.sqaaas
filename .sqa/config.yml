@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/marekandreas/elpa git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-black-zebra.sh
-        container: qc.acc_chummy-olive-armadillo
+        - /usr/bin/env sh .sqa/script.messy-charcoal-discus.sh
+        container: qc.acc_freaky-pear-buzzard
   QC.Doc:
     repos:
       github.com/marekandreas/elpa find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-tomato-cassowary.sh
-        container: qc.doc_lumpy-lemon-toucan
+        - /usr/bin/env sh .sqa/script.tasty-green-dingo.sh
+        container: qc.doc_pokey-rose-chamois
       github.com/marekandreas/elpa git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-khaki-opossum.sh
-        container: qc.doc_lumpy-flax-squid
+        - /usr/bin/env sh .sqa/script.greasy-scarlet-lemur.sh
+        container: qc.doc_skimpy-vermilion-sparrow
       github.com/marekandreas/elpa markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-violet-ladybird.sh
-        container: qc.doc_homey-amber-opossum
+        - /usr/bin/env sh .sqa/script.skanky-champagne-chimpanzee.sh
+        container: qc.doc_cranky-plum-coati
   QC.Lic:
     repos:
       github.com/marekandreas/elpa licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-black-newt.sh
-        container: qc.lic_pasty-turquoise-moth
+        - /usr/bin/env sh .sqa/script.blurry-mustard-audemer.sh
+        container: qc.lic_hazy-crimson-reindeer
   QC.Sec:
     repos:
       github.com/marekandreas/elpa bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-heliotrope-koala.sh
-        container: qc.sec_cloudy-cyan-affenpinscher
+        - /usr/bin/env sh .sqa/script.leaky-wisteria-swan.sh
+        container: qc.sec_cranky-smalt-frigatebird
   QC.Sty:
     repos:
       github.com/marekandreas/elpa flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-white-buzzard.sh
-        container: qc.sty_gloppy-aquamarine-goose
+        - /usr/bin/env sh .sqa/script.gummy-teal-chamois.sh
+        container: qc.sty_skimpy-cerise-newfoundland
   QC.Ver:
     repos:
       github.com/marekandreas/elpa get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-taupe-eel.sh
-        container: qc.ver_silly-asparagus-dugong
+        - /usr/bin/env sh .sqa/script.gamy-heliotrope-caiman.sh
+        container: qc.ver_silly-carmine-harrier
 timeout: 1800
